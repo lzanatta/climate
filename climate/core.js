@@ -39,7 +39,7 @@ function createWeatherReport( weatherData ) {
       }, 
       temperature: {
         current: rawData.current.temp_c,
-        sensation: rawData.current.feelslike_c,
+        apparent: rawData.current.feelslike_c,
         min: rawData.forecast.forecastday[0].day.mintemp_c,
         max: rawData.forecast.forecastday[0].day.maxtemp_c
       }

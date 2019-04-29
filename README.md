@@ -29,7 +29,7 @@ climate.getTemperature( 51.513214, -0.094938 )
     },
     temperature: {
         current: 10,
-        sensation: 10,
+        apparent: 10,
         min: 7.7,
         max: 14
     }
@@ -49,7 +49,7 @@ climate.getTemperature( 'los angeles' );
     },
     temperature: {
         current: 18.9,
-        sensation: 18.9,
+        apparent: 18.9,
         min: 15.6,
         max: 22.3
     }
