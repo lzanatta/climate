@@ -56,6 +56,15 @@ climate.getTemperature( 'los angeles' );
 }
 ```
 
+In case of an error, *climate* resolves to an error. For example:
+
+```javascript
+climate.getTemperature( 'tatooine' );
+```
+```javascript
+{'error':{'code':1006,'message':'No matching location found.'}}
+```
+
 Temperatrue information is given in **degrees Celsius**.
 
 ## License
