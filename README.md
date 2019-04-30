@@ -56,7 +56,7 @@ climate.getTemperature( 'los angeles' );
 }
 ```
 
-In case of an error, *climate* resolves to an error. For example:
+In case of an error, *climate* resolves to an ```error```. For example:
 
 ```javascript
 climate.getTemperature( 'tatooine' );
