@@ -1,5 +1,6 @@
-# node folder
+# node folders
 node_modules/
+coverage/
 
 # misc
 *.txt
