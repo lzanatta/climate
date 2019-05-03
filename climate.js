@@ -1,13 +1,18 @@
-const weather = require( './climate/core.js' );
+const data = require( './climate/weather_data' );
+const report = require( './climate/weather_report' );
 
-function init( arg ) {
-   weather.setKey( arg ); 
+let API_KEY = 0;
+
+// Set API key
+function init( key ) {
+  API_KEY = 'key=' + key;
 }
 
+// Get weather from location
 async function getTemperature( ...args ) {
-  let result;
-  let weatherData;
   let query;
+  let result;
+  let weather;
 
   if ( args.length === 1) {
     query = '&q=' + args;
@@ -18,9 +23,9 @@ async function getTemperature( ...args ) {
   }
 
   try {
-    weatherData = await weather.getWeatherData( query );
-    result = weather.createWeatherReport( weatherData );
-    return result;
+    result = await data.getWeatherData( query, API_KEY );
+    weather = report.createWeatherReport( result );
+    return weather;
   } catch ( error ) {
     throw error;
   }
