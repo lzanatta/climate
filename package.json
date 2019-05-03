@@ -1,0 +1,22 @@
+{
+  "name": "climate",
+  "version": "0.1.0",
+  "description": "A JavaScript library for weather information",
+  "main": "climate.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lszanata/climate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lszanata/climate/issues"
+  },
+  "homepage": "https://github.com/lszanata/climate#readme",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
