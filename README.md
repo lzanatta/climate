@@ -1,4 +1,6 @@
 # climate
+[![Build Status](https://travis-ci.org/lszanata/climate.svg?branch=master)](https://travis-ci.org/lszanata/climate)
+
 A simple JavaScript library for weather information.
 
 Weather data is fetched from [APIXU](https://www.apixu.com/).
