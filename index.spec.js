@@ -7,24 +7,25 @@ const { randomBytes } = require( 'crypto' );
 jest.mock( './lib/parse_weather_data', () => jest.fn() );
 jest.mock( './lib/fetch_weather_data', () => jest.fn() );
 
-const response = {
-  location: 'Porto Alegre, Rio Grande do Sul, Brasil',
+// Expected reply from 'parse_weather_data' looks like this
+const expectedReply = {
+  location: 'Porto Alegre, Rio Grande do Sul, Brazil',
   coordinates: {
-    latitude: -34.34,
-    longitude: -48.43
+    latitude: -30.03,
+    longitude: -51.2
   },
   temperature: {
-    current: 22,
-    apparent: 26,
-    min: 29,
-    max: 13
+    current: 26.0,
+    apparent: 28.9,
+    min: 21.9,
+    max: 30.2
   }
 };
 
 const apiKey = randomBytes( 12 ).toString( 'hex' );
 const location = 'Porto Alegre';
-const lat = 10;
-const long = 22;
+const lat = -30.03;
+const long = -51.2;
 
 describe( 'Climate lib spec', () => {
 
@@ -33,29 +34,29 @@ describe( 'Climate lib spec', () => {
     parse.mockReset();
   } );
 
-  describe( '.getTemperature', () => {
-    it( 'Should init the api with the key, call weatherAPI with the location string and parse the responde', async () => {
+  describe( '.getTemperature spec', () => {
+    it( 'Should init the API with the key, call the weather API with the location string and parse the response', async () => {
       fetchData.mockResolvedValue( apiResponse );
-      parse.mockReturnValue( response );
+      parse.mockReturnValue( expectedReply );
 
       index.init( apiKey );
 
       const result = await index.getTemperature( location );
 
-      expect( result ).toEqual( response );
+      expect( result ).toEqual( expectedReply );
       expect( fetchData ).toHaveBeenCalledWith( [ location ], apiKey );
       expect( parse ).toHaveBeenCalledWith( apiResponse );
     } );
 
-    it( 'Should init the api with the key, call weatherAPI with the get coords and parse the responde', async () => {
+    it( 'Should init the API with the key, call the weather API with the geo coords and parse the response', async () => {
       fetchData.mockResolvedValue( apiResponse );
-      parse.mockReturnValue( response );
+      parse.mockReturnValue( expectedReply );
 
       index.init( apiKey );
 
       const result = await index.getTemperature( lat, long );
 
-      expect( result ).toEqual( response );
+      expect( result ).toEqual( expectedReply );
       expect( fetchData ).toHaveBeenCalledWith( [ lat, long ], apiKey );
       expect( parse ).toHaveBeenCalledWith( apiResponse );
     } );
