@@ -4,7 +4,9 @@
   "description": "A JavaScript library for weather information",
   "main": "climate.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint ./ --fix"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/lszanata/climate#readme",
   "devDependencies": {
+    "eslint": "^5.16.0",
     "jest": "^24.7.1"
   }
 }

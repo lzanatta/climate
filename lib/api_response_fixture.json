@@ -1,0 +1,76 @@
+{
+  "location": {
+    "name": "MOCK NAME",
+    "region": "MOCK REGION",
+    "country": "MOCK COUNTRY",
+    "lat": 0,
+    "lon": 0,
+    "tz_id": "America/Los_Angeles",
+    "localtime_epoch": 1556853735,
+    "localtime": "2019-05-02 20:22"
+  },
+  "current": {
+    "last_updated_epoch": 1556853307,
+    "last_updated": "2019-05-02 20:15",
+    "temp_c": 5000,
+    "temp_f": 62.1,
+    "is_day": 0,
+    "condition": {
+      "text": "Clear",
+      "icon": "//cdn.apixu.com/weather/64x64/night/113.png",
+      "code": 1000
+    },
+    "wind_mph": 0,
+    "wind_kph": 0,
+    "wind_degree": 0,
+    "wind_dir": "N",
+    "pressure_mb": 1014,
+    "pressure_in": 30.4,
+    "precip_mm": 0,
+    "precip_in": 0,
+    "humidity": 75,
+    "cloud": 0,
+    "feelslike_c": 5000.1,
+    "feelslike_f": 62.1,
+    "vis_km": 16,
+    "vis_miles": 9,
+    "uv": 0,
+    "gust_mph": 9.6,
+    "gust_kph": 15.5
+  },
+  "forecast": {
+    "forecastday": [
+      {
+        "date": "2019-05-02",
+        "date_epoch": 1556755200,
+        "day": {
+          "maxtemp_c": 9999.9,
+          "maxtemp_f": 72.9,
+          "mintemp_c": 0,
+          "mintemp_f": 61,
+          "avgtemp_c": 20.2,
+          "avgtemp_f": 68.3,
+          "maxwind_mph": 9.2,
+          "maxwind_kph": 14.8,
+          "totalprecip_mm": 0,
+          "totalprecip_in": 0,
+          "avgvis_km": 19.5,
+          "avgvis_miles": 12,
+          "avghumidity": 63,
+          "condition": {
+            "text": "Partly cloudy",
+            "icon": "//cdn.apixu.com/weather/64x64/day/116.png",
+            "code": 1003
+          },
+          "uv": 8.4
+        },
+        "astro": {
+          "sunrise": "06:03 AM",
+          "sunset": "07:38 PM",
+          "moonrise": "05:08 AM",
+          "moonset": "05:38 PM"
+        }
+      }
+    ]
+  }
+}
