@@ -1,8 +1,9 @@
+const { randomBytes } = require( 'crypto' );
+
 const index = require( './' );
 const fetchData = require( './lib/fetch_weather_data' );
 const parse = require( './lib/parse_weather_data' );
 const apiResponse = require( './lib/api_response_fixture' );
-const { randomBytes } = require( 'crypto' );
 
 jest.mock( './lib/parse_weather_data', () => jest.fn() );
 jest.mock( './lib/fetch_weather_data', () => jest.fn() );
