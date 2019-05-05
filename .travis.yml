@@ -1,6 +1,6 @@
 language: generic
 services:
-- docker
+  - docker
 
 script: 
-- ./scripts/run_test.sh
+  - ./scripts/run_test.sh
