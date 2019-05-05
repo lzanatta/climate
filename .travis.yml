@@ -4,4 +4,3 @@ services:
 
 script: 
   - ./scripts/run_test.sh
-  - ./node_modules/.bin/codecov
