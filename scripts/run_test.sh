@@ -3,6 +3,7 @@
 set -e
 
 docker run --rm -t \
+  -e NPM_TOKEN="$NPM_TOKEN" \
   -v `pwd`:/app/ \
   -w /app/ \
     node:12.1.0-alpine \
