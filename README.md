@@ -66,10 +66,10 @@ await climate.getTemperature( 'tatooine' );
 
 // Will throw
 {
-	error: {
-		code: 1006,
-		message: 'No matching location found.'
-	}
+  error: {
+    code: 1006,
+    message: 'No matching location found.'
+  }
 }
 ```
 
