@@ -7,7 +7,7 @@ Weather data is fetched from [APIXU](https://www.apixu.com/).
 
 ## Usage
 
-```javascript
+```js
 const climate = require( './' );
 
 // Supply your API key
@@ -15,14 +15,12 @@ climate.init( 'YOUR_API_KEY' );
 
 // Pass a location's latitude and longitude, in decimal degrees
 // Middle of London
-climate.getTemperature( 51.513214, -0.094938 )
-  .then( result => console.log( result ) )
-  .catch( err => console.log( err ) );
+const result = await climate.getTemperature( 51.513214, -0.094938 )
 ```
 
-*climate* returns a ```Promise```, which resolves to a ```object``` with weather information, like this:
+*climate* returns a `Promise`, which resolves to a `object` with weather information, like this:
 
-```javascript
+```js
 {
   location: 'London, City of London, Greater London, United Kingdom',
   coordinates: {
@@ -38,11 +36,11 @@ climate.getTemperature( 51.513214, -0.094938 )
 }
 ```
 
-```javascript
+```js
 // You can also pass a string with a location name
-climate.getTemperature( 'los angeles' );
-```
-```javascript
+await climate.getTemperature( 'los angeles' );
+
+// will return
 {
   location: 'Los Angeles, California, United States of America',
   coordinates: {
@@ -58,17 +56,22 @@ climate.getTemperature( 'los angeles' );
 }
 ```
 
-In case of an error, *climate* resolves to an ```error```. For example:
+In case of an error, *climate* resolves to an `error`. For example:
 
-```javascript
-climate.getTemperature( 'tatooine' );
-```
-```javascript
-{'error':{'code':1006,'message':'No matching location found.'}}
+```js
+await climate.getTemperature( 'tatooine' );
+
+// Will throw
+{
+	error: {
+		code: 1006,
+		message: 'No matching location found.'
+	}
+}
 ```
 
 Temperatrue information is given in **degrees Celsius**.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](./LICENSE)

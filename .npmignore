@@ -1,0 +1,5 @@
+test/
+.travis.yml
+*.spec.js
+docs/
+coverage/
