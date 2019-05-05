@@ -1,3 +1,5 @@
-language: node_js
-node_js:
-  - "stable"
+language: generic
+services:
+- docker
+
+script: ./scripts/run_test.sh
