@@ -8,10 +8,16 @@ A simple JavaScript library for weather information.
 
 Weather data is fetched from [APIXU](https://www.apixu.com/).
 
+## Installation
+
+```bash
+npm install @lszanata/climate
+```
+
 ## Usage
 
 ```js
-const climate = require( './' );
+const climate = require( '@lszanata/climate' );
 
 // Supply your API key
 climate.init( 'YOUR_API_KEY' );
