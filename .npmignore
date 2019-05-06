@@ -1,5 +1,8 @@
-test/
+coverage/
+scripts/
 .travis.yml
 *.spec.js
-docs/
-coverage/
+*.sh
+*.cmd
+.*
+*_fixture*

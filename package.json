@@ -1,6 +1,6 @@
 {
   "name": "@lszanata/climate",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A JavaScript library for weather information",
   "main": "climate.js",
   "scripts": {
