@@ -2,8 +2,6 @@
 [![Build Status](https://travis-ci.org/lszanata/climate.svg?branch=master)](https://travis-ci.org/lszanata/climate)
 [![codecov](https://codecov.io/gh/lszanata/climate/branch/master/graph/badge.svg)](https://codecov.io/gh/lszanata/climate)
 
-
-
 A simple JavaScript library for weather information.
 
 Weather data is fetched from [APIXU](https://www.apixu.com/).
