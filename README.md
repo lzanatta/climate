@@ -47,7 +47,7 @@ const result = await climate.getTemperature( 51.513214, -0.094938 )
 // You can also pass a string with a location name
 await climate.getTemperature( 'los angeles' );
 
-// will return
+// Will return
 {
   location: 'Los Angeles, California, United States of America',
   coordinates: {
